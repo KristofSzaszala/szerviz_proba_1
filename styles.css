@@ -1,0 +1,723 @@
+@font-face {
+    font-family: 'BoschSansCond-Bold';
+    src: url('fonts/BoschSansCond-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BoschSans-Regular';
+    src: url('fonts/BoschSans-Regular.otf') format('opentype');
+}
+
+body {
+    margin: 0;
+    font-family: 'BoschSans-Regular';
+}
+
+header {
+    height: 145px; /* Összesen: 25px + 60px + 60px (a nav magassága) */
+}
+
+.header-top {
+    height: 25px;
+    background-color: white; /* Fehér háttér a felső részhez */
+}
+
+.header-bottom {
+    height: 60px;
+    background-color: #00304b; /* Kék háttér az alsó részhez */
+    display: flex;
+    align-items: center; /* Vertikális középre igazítás */
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+
+
+.logo-claim-wrapper {
+    display: flex;
+    align-items: center; /* Vertikális középre igazítás */
+}
+
+.logo img {
+    width: 106px; /* Logó szélessége */
+    height: 106px; /* Logó magassága */
+    margin-right: 30px !important; /* Különbség a logó és a szöveg között */
+    margin-top: 28px;
+}
+
+.claim {
+    color: white; /* Szöveg színe */
+    font-size: 30px; /* Szöveg mérete */
+    font-family: 'BoschSansCond-Bold';
+    word-spacing: 5px;
+}
+
+nav {
+    background-color: white; /* Nav háttérszíne */
+    padding: 0; /* Nincs extra padding */
+    height: 60px; /* A navigáció magassága */
+    display: flex;
+    justify-content: center; /* Középre igazítás */
+    font-family: 'BoschSans-Regular';
+    margin-top: 10px;
+    background-color: transparent;
+}
+
+
+
+nav ul li {
+    font-size: 20px;
+
+}
+
+
+
+nav ul li a:hover {
+    color: #4c90cd; /* Hover szín */
+}
+
+nav ul li a.active {
+    color: #4c90cd; /* Az aktív link színe */
+}
+
+
+
+
+.navbar-collapse {
+    padding: 0; /* Eltávolítja a paddingot, hogy kisebb legyen */
+    z-index: 20; /* Magasabb z-index */
+    margin-top: -10px;
+    
+}
+
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none !important;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-family: 'BoschSans-Regular';
+}
+
+nav ul li a:hover {
+    color: #4c90cd;
+}
+
+nav ul li a.active {
+    color: #4c90cd;
+}
+
+.navbar-toggler {
+    display: none;
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
+
+.navbar-toggler i {
+    font-size: 30px; /* Növeltük a méretet */
+    color: white; /* Szín fehérre állítva */
+    display: block;
+    margin: auto;
+}
+
+.navbar-toggler.active {
+    background-color: #4c90cd; /* Kék háttér az X ikonhoz */
+    border-radius: 5px; /* Lekerekített szélek */
+}
+
+.navbar-toggler:hover {
+    background-color: #4c90cd; /* Kék háttér a hamburger ikon alatt, ha fölé viszik */
+    border-radius: 5px; /* Lekerekített szélek */
+}
+
+.no-scroll {
+    overflow: hidden; /* Teljesen letiltja a görgetést */
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        padding: 0;
+        margin:0;
+        background-color: #ffffff;
+        box-shadow: none;
+    }
+    
+    nav ul li{
+        width: 100%;
+        margin: 5px 0;
+        background-color: #ffffff;
+        box-shadow: none;
+        
+    }
+    
+    nav ul li a{
+        display: block;
+        padding: 15px 0;
+        border-radius: 0;
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        margin-top: 0;
+        background-color: white; /* Háttérszín módosítása a lenyíló menünek */
+        position: fixed;
+        top: 130px;
+        left: 0;
+        z-index: 20;
+        overflow-y: auto;
+        height: calc(100vh - 130px); /* A header alatt a teljes magasság */
+        box-shadow: none;
+    }
+
+    
+    nav ul li a:hover {
+        color: #4c90cd;; /* Megőrzi a szülő elem (li) színét */
+        background-color: transparent; /* Háttérszín is maradjon átlátszó */
+    }
+
+    nav{
+        margin-top: 30px;
+    }
+
+    h2{
+        font-size: 40px !important;
+        margin-top: 20px !important;
+    }
+    p{
+        text-align: left !important;
+    }
+
+    .terkep{
+        text-align: center !important;
+    }
+    
+    .navbar-collapse.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 15px 0;
+        display: block;
+        text-align: center;
+    }
+
+    .claim {
+        font-size: 20px;
+    }
+
+    .logo img {
+        margin-right: 20px !important; /* Különbség a logó és a szöveg között */
+    }
+
+    .header-bottom{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar-toggler {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        padding: 0;
+        margin:0;
+        background-color: #ffffff;
+        box-shadow: none;
+    }
+
+    nav ul li{
+        width: 100%;
+        margin: 5px 0;
+        background-color: #ffffff;
+        box-shadow: none;
+        
+    }
+
+    nav ul li a{
+        display: block;
+        padding: 15px 0;
+        border-radius: 0;
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        margin-top: 0;
+        background-color: white; /* Háttérszín módosítása a lenyíló menünek */
+        position: fixed;
+        top: 130px;
+        left: 0;
+        z-index: 20;
+        overflow-y: auto;
+        height: calc(100vh - 130px); /* A header alatt a teljes magasság */
+        box-shadow: none;
+    }
+
+
+
+    nav{
+        margin-top: 30px;
+    }
+
+    h2{
+        font-size: 50px !important;
+    }
+    p{
+        text-align: left !important;
+    }
+
+    .terkep{
+        text-align: center !important;
+    }
+    
+    .navbar-collapse.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 15px 0;
+        display: block;
+        text-align: center;
+    }
+
+    .claim {
+        font-size: 30px;
+    }
+
+    .footer p{
+        text-align: center !important;
+    }
+}
+
+
+
+
+
+/* Kontakt oldal*/
+
+.contact-title {
+    text-align: center;
+    font-family: 'BoschSansCond-Bold';
+    color: #00304b;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    flex: 1;
+    padding-right: 20px; /* A jobb oldalra kis távolságot adunk */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center; /* Az ikon és a szöveg vízszintes középre igazítása */
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-family: 'BoschSansCond-Bold';
+    font-size: 20px;
+}
+
+
+.contact-item i {
+    width: 32px; /* Ikon szélesség */
+    height: 32px; /* Ikon magasság */
+    font-size: 32px; /* Ikon alap mérete */
+    color: #00304b;
+    margin-right: 15px; /* Távolság az ikon és a szöveg között */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.contact-item a {
+    color: #00304b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #4c90cd;
+}
+
+.contact-form-container {
+    flex: 1;
+    max-width: 100%;
+}
+
+.contact-form {
+    border-radius: 5px;
+}
+
+.contact-form .form-control {
+    margin-bottom: 10px;
+}
+
+.map-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.map-container p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'BoschSansCond-Bold';
+    font-size: 30px;
+    color: #00304b;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #00304b;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    font-family: 'BoschSansCond-Bold';
+    font-size: 18px;
+}
+
+.btn-primary:hover {
+    background-color: #4c90cd; /* Gomb háttérszíne hover esetén */
+    color: white; /* Gomb szövegének színe hover esetén */
+}
+
+.contact-form-text {
+    flex: 1;
+    padding-right: 20px;
+    font-family: 'BoschSansCond-Bold';
+    color: #00304b;
+    font-size: 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+@media (max-width: 767px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .contact-info {
+        padding-right: 0;
+    }
+
+    .contact-item {
+        margin-bottom: 10px;
+    }
+
+    .contact-form-container {
+        margin-top: 20px;
+    }
+}
+
+
+/* Muszaki oldal*/
+
+.service-section {
+    padding: 40px 20px;
+}
+
+.service-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'BoschSansCond-Bold';
+    color: #00304b;
+    margin-top: 60px;
+}
+
+/* Kollegak oldal */
+
+
+.team-title {
+    text-align: center;
+    font-family: 'BoschSansCond-Bold'; /* Használja ugyanazt a betűtípust */
+    color: #00304b; /* Ugyanaz a szín */
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    text-align: center;
+    background-color: #fff;
+    
+    margin-bottom: 30px;
+    display: flex; /* Flexbox beállítása */
+    flex-direction: column; /* Oszlopban rendezi a tartalmat */
+    justify-content: center; /* Középre igazítja a tartalmat */
+    align-items: center; /* Középre igazítja a tartalmat */
+}
+
+
+.team-member img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #00304b; /* Ugyanaz a szín */
+    font-family: 'BoschSansCond-Bold';
+}
+
+.team-member p {
+    font-size: 1rem;
+    text-align: center;
+    color: black
+}
+
+@media (max-width: 767px) {
+    .team-member {
+        margin-bottom: 20px;
+    }
+    .team-member img {
+        max-width: 300px; /* Növeli a kép méretét telefonon */
+    }
+}
+
+
+
+/* Szerviz oldal*/
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.service-card {
+    background-color: #f0f0f0;
+    color: #003253;
+    padding: 30px;
+    width: calc(50% - 10px); /* Két doboz egymás mellett */
+    box-sizing: border-box;
+    font-family: 'BoschSansCond-Bold', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.service-card:hover {
+    background-color: #4c90cd; /* Világosabb kék háttér a hover állapotban */
+    color: white; /* Fehér szöveg a hover állapotban */
+    text-decoration: none;
+}
+
+.service-card a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 767px) {
+    .service-card {
+        width: 100%; /* Mobil nézetben a dobozok egymás alatt */
+    }
+}
+
+
+
+
+
+
+/* Footer */
+
+.footer {
+    background-color: #00304b;
+    color: white;
+    padding: 20px 20px;
+    font-family: 'BoschSansCond-Bold'; /* A korábban használt betűtípus */
+}
+
+
+
+.footer-container {
+    max-width: 1100px; /* Maximális szélesség */
+    margin: 0 auto; /* Középre helyezés */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center; /* Oszlopok vízszintes középre igazítása */
+    flex-wrap: wrap; /* Tördelés kisebb képernyőkön */
+    width: 100%; /* Győződjünk meg róla, hogy a `row` kitölti a szülőt */
+}
+
+
+.footer h5 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.col-md-4 p{
+    text-align: left !important;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-link {
+    color: #4c90cd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #002838;
+    margin-top: 20px;
+    color: #cccccc;
+    font-size: 0.8rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Középre igazítja a tartalmat */
+        text-align: center;
+        padding: 20px; /* Biztosítja, hogy minden elem jól illeszkedjen */
+    }
+    
+    .footer .row {
+        width: 100%;
+        justify-content: center;
+        align-items: center; /* Oszlopok középre igazítása */
+    }
+
+    .footer .col-md-4 {
+        width: 100%; /* Teljes szélességű oszlopok */
+        margin-bottom: 20px; /* Távolság az oszlopok között */
+        text-align: center;
+    }
+
+    .footer-bottom {
+        padding: 40px 0; /* Magasság növelése */
+        width: 100%; /* A szélesség 100%-ra állítása */
+        box-sizing: border-box; /* Az esetleges padding figyelembevételével */
+    }
+
+    .footer h5, 
+    .footer p, 
+    .footer a {
+        text-align: center !important; /* Minden szöveg középre igazítása */
+    }
+
+}
+
+
+
+
+
+/* A h3 után több hely */
+.services-section h3 + h4, 
+.services-section h3 + ul {
+    margin-top: 30px;
+}
+
+/* Kiemelt részek: Magánszemély és Cég szekciók */
+.services-section h4 {
+    font-weight: bold;
+}
+
+/* 'Amennyiben' mondatok piros színnel */
+.services-section p strong {
+    color: red;
+}
+
+
+.links-container a {
+    display: block; /* A linkek blokk szintűek, így egymás alatt lesznek */
+    margin-bottom: 10px; /* Kis térköz a linkek között */
+    color: #007bff; /* Linkek színe */
+    text-decoration: none; /* Aláhúzás eltávolítása */
+}
+
+.links-container a:hover {
+    text-decoration: underline; /* Hover hatás: aláhúzás */
+}
+
+h2{
+    font-size: 48px;
+    margin-bottom: 50px !important;
+}
+

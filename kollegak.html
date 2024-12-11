@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" href="/pics/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="32x32" href="/pics/favicon-32x32.png">
+    <link rel="icon" sizes="192x192" href="pics/favicon-192x192.png">
+    <link rel="apple-touch-icon" href="/pics/apple-touch-icon.png">
+
+    <title>Kollégák</title>
+</head>
+<div class="collapse navbar-collapse" id="navbarNav"></div>
+<body>
+    <header>
+        <div class="header-top"></div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="logo-claim-wrapper">
+                    <div class="logo">
+                        <img src="pics/logo.png" alt="Logó">
+                    </div>
+                    <div class="claim">Tüf Szerviz Nyíregyháza</div>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i> <!-- Hamburger ikon -->
+                <i class="bi bi-x" style="display: none;"></i> <!-- X ikon -->
+            </button>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="index.html">Főoldal</a></li>
+                    <li class="nav-item"><a href="muszaki_vizsga.html">Műszaki vizsga</a></li>
+                    <li class="nav-item"><a href="szerviz.html" >Szerviz</a></li>
+                    <li class="nav-item"><a href="kollegak.html" class="active">Kollégák</a></li>
+                    <li class="nav-item"><a href="kapcsolat.html">Kapcsolat</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4">
+        <section class="team-section">
+            <h2 class="team-title">Kollégáink</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="pics/team/andris.jpg" alt="Kolléga 1" class="img-fluid">
+                        <h3>Balkányi András</h3>
+                        <p>autószerelő</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="pics/team/borisz.jpg" alt="Kolléga 2" class="img-fluid">
+                        <h3>Borbély Zsolt</h3>
+                        <p>műhelyvezető</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="pics/team/gergo.jpg" alt="Kolléga 3" class="img-fluid">
+                        <h3>Révész Gergő</h3>
+                        <p>autószerelő</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="pics/team/gyuri.jpg" alt="Kolléga 4" class="img-fluid">
+                        <h3>Kovács György</h3>
+                        <p>karosszéria lakatos</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="pics/team/zoli.jpg" alt="Kolléga 5" class="img-fluid">
+                        <h3>Greskó Zoltán</h3>
+                        <p>autószerelő</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="pics/team/zsolt.jpg" alt="Kolléga 6" class="img-fluid">
+                        <h3>Kovács Zsolt</h3>
+                        <p>autószerelő</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer mt-5">
+        <div class="footer-container text-center text-md-left">
+            <div class="row footer-row">
+                <!-- Cím -->
+                <div class="col-md-4">
+                    <h5>Elérhetőség</h5>
+                    <p>
+                        Cím: 4400 Nyíregyháza, Debreceni út 107.<br>
+                        Telefon: +36 42 59 50 59<br>
+                        Szerviz mobil: +36 20 372 1000
+                    </p>
+                </div>
+                <!-- E-mail -->
+                <div class="col-md-4">
+                    <h5>Kapcsolat</h5>
+                    <p>
+                        Szerviz e-mail: <a href="mailto:szerviz@tufkft.hu">szerviz@tufkft.hu</a><br>
+                        Vizsgaközpont e-mail: <a href="mailto:vizsgakozpont@tufkft.hu">vizsgakozpont@tufkft.hu</a>
+                    </p>
+                </div>
+                <!-- Adatkezelési tájékoztató -->
+                <div class="col-md-4">
+                    <h5>Információk</h5>
+                    <p>
+                        <a href="docs/adatkezelesi_tajekoztato.pdf" target="_blank" class="footer-link">Adatkezelési tájékoztató</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <p>&copy; 2024 Tüf Szerviz Nyíregyháza. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

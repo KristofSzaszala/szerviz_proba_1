@@ -1,0 +1,637 @@
+/* @font-face definíció a BoschSansCond-Regular.otf betűtípushoz */
+@font-face {
+    font-family: 'BoschSansCond-Bold'; /* Betűtípus neve */
+    src: url('fonts/BoschSansCond-Bold.otf') format('opentype'); /* Az OTF fájl elérési útja */
+}
+
+@font-face {
+    font-family: 'BoschSans-Bold'; /* Betűtípus neve */
+    src: url('fonts/BoschSans-Bold.otf') format('opentype'); /* Az OTF fájl elérési útja */
+}
+
+/* Globális beállítások */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; /* Alapértelmezett betűtípus, ha a Bosch betűtípus nem elérhető */
+}
+
+
+
+
+body {
+    background: url('pics/bg1.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    animation: backgroundAnimation 25s infinite; /* Háttér animáció */
+    min-height: 100vh; /* A háttér teljes magasságra állítása */
+    margin: 0; /* Margó eltávolítása, hogy a háttér teljes magasságú legyen */
+    transition: background-image 1s ease-in-out; /* Áttűnési hatás */
+    justify-content: center;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-image: url('pics/bg1.jpg'); }
+    20% { background-image: url('pics/bg2.jpg'); }
+    40% { background-image: url('pics/bg3.jpg'); }
+    60% { background-image: url('pics/bg4.jpg'); }
+    80% { background-image: url('pics/bg5.jpg'); }
+    100% { background-image: url('pics/bg1.jpg'); }
+}
+
+
+
+
+
+/* Header */
+.header {
+    height: 135px; /* Header magasság */
+    display: flex;
+    justify-content: center; /* Középre igazítás vízszintesen */
+    align-items: center; /* Középre igazítás függőlegesen */
+    position: relative; /* A csík pozicionálásához */
+}
+
+/* Csík */
+.header:before {
+    content: "";
+    position: absolute;
+    top: 25px; /* 25 px-el a teteje alatt */
+    left: 0;
+    right: 0;
+    height: 60px; /* Csík magassága */
+    background-color: #00304b; /* Csík színe */
+}
+
+/* Szöveg a headerben */
+.header-content {
+    display: flex;
+    justify-content: center; /* Középre igazítás vízszintesen a szövegben */
+    align-items: center; /* Középre igazítás függőlegesen a szövegben */
+    position: relative;
+    z-index: 1; /* A szöveg előtérbe helyezése */
+    height: 100%; /* Magasság beállítása */
+    top: calc(25px + 30px); /* Az elején az csík és a szöveg magassága */
+    transform: translateY(-50%); /* A szöveg függőleges középre igazítása a csíkon belül */
+    gap: 205px; /* Közötti távolság a szövegek között */
+}
+
+/* Kép a headerben */
+.header-content img.header-image {
+    width: 120px; /* Kép szélessége */
+    height: 120px; /* Kép magassága */
+    margin-right: 20px; /* Kép és szöveg közötti távolság */
+    position: relative; /* Kép pozicionálásához */
+    top: 18px; /* Kép pozicionálása, hogy nyúljon a csík fele */
+}
+
+.header-content span {
+    font-family: 'BoschSansCond-Bold'; /* Alkalmazás a header szövegére */
+    margin: 0 20px; /* Középső elhelyezés */
+    color: white; /* Szöveg színe */
+    font-size: 30px; /* Betűméret, állítsd be az igényeidnek megfelelően */
+}
+
+
+/* Tartalom */
+.content {
+    text-align: center;
+    margin-top: 200px; /* Margó a tartalom fölött */
+    font-family: 'BoschSansCond-Bold';
+    color: white;
+}
+
+/* Téglalapok konténer */
+.rectangle-container {
+    display: flex; /* Flexbox elrendezés */
+    justify-content: center; /* Középre igazítás */
+}
+
+/* 300x400 téglalap lekerekített sarkokkal */
+.rectangle {
+    width: 300px; /* Téglalap szélessége */
+    height: 400px; /* Téglalap magassága */
+    background-color: #003b6a; /* Téglalap színe */
+    border-radius: 10px; /* Lekerekített sarkok */
+    margin: 0 10px; /* Margó a téglalapok között */
+    text-align: center; /* Középre igazítja a szöveget */
+    padding: 10px; /* Belső margó a téglalapokon belül */
+    font-size: 40px;
+}
+/* Kép a téglalapban */
+.rectangle-image {
+    width: 70px; /* Kép szélessége */
+    height: 70px; /* Kép magassága */
+    margin-top: 5px;
+}
+
+.rectangle-bottom{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Szerviz és Műszaki vizsga ikonok */
+.service-icon,
+.inspection-icon {
+    width: 50px; /* Ikon szélessége */
+    height: 50px; /* Ikon magassága */
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* Aláírás */
+.rectangle p {
+    color: white; /* Szöveg színe */
+    margin-top: 8px; /* Margó a kép és a szöveg között */
+}
+
+/* Szerviz és műszaki vizsga információ */
+.service-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Margó a szerviz és műszaki vizsga szöveg között */
+    background-color: #e2001a;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.service-info p{
+    margin-top: 15px;
+}
+
+/* Távolítsa el az aláhúzást és az alapértelmezett színt */
+.no-underline {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Eltávolítja a link alapértelmezett színezését és az aláhúzást */
+.no-underline:hover,
+.no-underline:visited {
+    text-decoration: none;
+}
+
+/* Nyitvatartás */
+.opening-hours {
+    color: white; /* Szöveg színe */
+    margin-top: 10px; /* Margó a nyitvatartás alatt */
+    font-size: 20px;
+}
+
+.button{
+    text-decoration: none;
+}
+
+/* Hover állapot */
+.button:hover {
+    background-color: #e55e00; /* Háttérszín változtatás hover esetén */
+    transform: scale(1.05); /* Gomb méretének növelése hover esetén */
+    cursor: pointer; /* Kéz ikon megjelenítése */
+}
+
+/* Hívjon gomb */
+.call-button:hover {
+    background-color: limegreen; /* Külön háttérszín a hívjon gombhoz */
+}
+
+/* Útvonal gomb */
+.route-button:hover {
+    background-color: #4c90cd; /* Külön háttérszín az útvonal gombhoz */
+}
+
+.service-info:hover:hover {
+    background-color: #e2001a; /* Háttérszín változtatás hover esetén */
+    transform: scale(1.05); /* Gomb méretének növelése hover esetén */
+    cursor: pointer; /* Kéz ikon megjelenítése */
+}
+
+
+@media (max-width: 768px) { /* Mobil nézet */
+    
+    .header-content {
+        flex-direction: row; /* Horizontális elrendezés */
+        gap: 0px; /* Kisebb távolság a szövegek között */
+    }
+
+    .header-content img.header-image {
+        width: 80px; /* Logó méretének csökkentése */
+        height: 80px;
+        position: relative;
+        top: 0px;
+        margin-left: 10px;
+    }
+
+    .header-content span {
+        font-size: 18px; /* Szöveg méretének csökkentése */
+        margin-left: 7px;
+        margin-right: 7px;;
+    }
+
+    .content {
+        display: flex; /* Flexbox elrendezés a tartalomhoz */
+        flex-direction: column; /* Vertikális elrendezés */
+        align-items: center; /* Középre igazítás */
+        margin: 100px;
+        padding-bottom:10px;
+        margin-bottom: 0; /* Eltávolítja a felesleges margót */
+    }
+
+    .rectangle-container {
+        display: flex; /* Flexbox elrendezés a téglalapokhoz */
+        flex-direction: column; /* Vertikális elrendezés */
+        gap: 20px; /* Kis távolság a konténerek között */
+    }
+    .rectangle {
+        width: 100%; /* Vagy 100% - a mobil nézethez */
+        max-width: 300px; /* Maximális szélesség */
+    }
+
+  
+
+
+    .rectangle-header{
+        text-align: center;
+        display: flex; /* Flexbox elrendezés a város neve és a gombok számára */
+        flex-direction: column; /* Vertikális elrendezés */
+        justify-content: center; /* Középre igazítás */
+        font-size: 40px;
+        color: white;
+    }
+
+    .rectangle-bottom {
+        display: flex; /* Flexbox elrendezés */
+        flex-direction: row; /* Vertikális elrendezés */
+        align-items: center; /* Középre igazítás */
+        width: 100%; /* Szélesség 100% */
+        gap:30px;
+        margin: 0;
+    }
+    
+    .info-buttons {
+        display: flex; /* Flexbox elrendezés a gombokhoz */
+        justify-content: center; /* Középre igazítás */
+        width: 70%; /* A gombok szélessége 70% */
+        gap: 10px !important; /* Távolság a gombok között */
+        margin-top: 20px !important; /* Tér a gombok felett */
+        margin-bottom: 10px;
+    }
+    
+    .button {
+        display: flex; /* Flexbox elrendezés a gombokhoz */
+        align-items: center; /* Középre igazítás a gombokon belül */
+        text-align: center; /* Szöveg középre igazítása */
+        border: none; /* Határ eltávolítása */
+        border-radius: 5px; /* Lekerekített sarkok */
+        cursor: pointer; /* Mutató a gombok fölött */
+    }
+
+    
+    .button img {
+        margin-right: 10px; /* Tér a kép és a szöveg között */
+    }
+
+    .city-name3{
+        font-size: 18px !important;
+        margin-left: 5px !important;
+    }
+
+    .city-name2{
+        margin-left: 20px;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .opening-hours{
+        font-size: 19px;
+    }
+
+    .opening-hours{
+        margin-bottom: 0px;
+        margin-top: 5px !important;
+    }
+
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1000px) { /* Tablet nézet */
+
+    .header-content {
+        flex-direction: row; /* Vízszintes elrendezés */
+        gap: 20px; /* Kisebb távolság a szövegek között */
+    }
+
+    .header-content img.header-image {
+        width: 100px; /* Logó méretének csökkentése */
+        height: 100px;
+        position: relative;
+        top: 10px;
+    }
+
+    .header-content span {
+        font-size: 30px; /* Szöveg méretének csökkentése */
+    }
+
+    .content {
+        display: flex; /* Flexbox elrendezés a tartalomhoz */
+        flex-direction: column; /* Vertikális elrendezés */
+        align-items: center; /* Középre igazítás */
+        margin: 100px;
+        padding-bottom:10px;
+        margin-bottom: 0; /* Eltávolítja a felesleges margót */
+    }
+
+    .rectangle-container {
+        display: flex; /* Flexbox elrendezés a téglalapokhoz */
+        flex-direction: column; /* Vertikális elrendezés */
+        gap: 20px; /* Kis távolság a konténerek között */
+    }
+    .rectangle {
+        width: 100%; /* Vagy 100% - a mobil nézethez */
+        max-width: 300px; /* Maximális szélesség */
+    }
+
+  
+
+
+    .rectangle-header{
+        text-align: center;
+        display: flex; /* Flexbox elrendezés a város neve és a gombok számára */
+        flex-direction: column; /* Vertikális elrendezés */
+        justify-content: center; /* Középre igazítás */
+        font-size: 40px;
+        color: white;
+    }
+
+    .rectangle-bottom {
+        display: flex; /* Flexbox elrendezés */
+        flex-direction: row; /* Vertikális elrendezés */
+        align-items: center; /* Középre igazítás */
+        width: 100%; /* Szélesség 100% */
+        gap:30px;
+        margin: 0;
+    }
+    
+    .info-buttons {
+        display: flex; /* Flexbox elrendezés a gombokhoz */
+        justify-content: center; /* Középre igazítás */
+        width: 70%; /* A gombok szélessége 70% */
+        gap: 10px !important; /* Távolság a gombok között */
+        margin-top: 20px !important; /* Tér a gombok felett */
+        margin-bottom: 10px;
+    }
+    
+    .button {
+        display: flex; /* Flexbox elrendezés a gombokhoz */
+        align-items: center; /* Középre igazítás a gombokon belül */
+        text-align: center; /* Szöveg középre igazítása */
+        border: none; /* Határ eltávolítása */
+        border-radius: 5px; /* Lekerekített sarkok */
+        cursor: pointer; /* Mutató a gombok fölött */
+    }
+
+    
+    .button img {
+        margin-right: 10px; /* Tér a kép és a szöveg között */
+    }
+
+    .city-name3{
+        font-size: 18px !important;
+        margin-left: 5px !important;
+    }
+
+    .city-name2{
+        margin-left: 20px;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .opening-hours{
+        font-size: 19px;
+    }
+
+    .opening-hours{
+        margin-bottom: 0px;
+        margin-top: 5px !important;
+    }
+
+}
+
+
+@media (min-width: 1001px) and (max-width: 1353px) { /* Tablet nézet */
+
+    .header-content {
+        flex-direction: row; /* Vízszintes elrendezés */
+        gap: 50px; /* Kisebb távolság a szövegek között */
+    }
+
+    .header-content img.header-image {
+        width: 100px; /* Logó méretének csökkentése */
+        height: 100px;
+        position: relative;
+        top: 10px;
+    }
+
+    .header-content span {
+        font-size: 40px; /* Szöveg méretének csökkentése */
+    }
+
+    .content {
+        display: flex; /* Flexbox elrendezés a tartalomhoz */
+        flex-direction: column; /* Vertikális elrendezés */
+        align-items: center; /* Középre igazítás */
+        margin: 100px;
+        padding-bottom:10px;
+        margin-bottom: 0; /* Eltávolítja a felesleges margót */
+    }
+
+    .rectangle-container {
+        display: flex; /* Flexbox elrendezés a téglalapokhoz */
+        flex-direction: column; /* Vertikális elrendezés */
+        gap: 20px; /* Kis távolság a konténerek között */
+    }
+    .rectangle {
+        width: 100%; /* Vagy 100% - a mobil nézethez */
+        max-width: 300px; /* Maximális szélesség */
+    }
+
+  
+
+
+    .rectangle-header{
+        text-align: center;
+        display: flex; /* Flexbox elrendezés a város neve és a gombok számára */
+        flex-direction: column; /* Vertikális elrendezés */
+        justify-content: center; /* Középre igazítás */
+        font-size: 40px;
+        color: white;
+    }
+
+    .rectangle-bottom {
+        display: flex; /* Flexbox elrendezés */
+        flex-direction: row; /* Vertikális elrendezés */
+        align-items: center; /* Középre igazítás */
+        width: 100%; /* Szélesség 100% */
+        gap:30px;
+        margin: 0;
+    }
+    
+    .info-buttons {
+        display: flex; /* Flexbox elrendezés a gombokhoz */
+        justify-content: center; /* Középre igazítás */
+        width: 70%; /* A gombok szélessége 70% */
+        gap: 10px !important; /* Távolság a gombok között */
+        margin-top: 20px !important; /* Tér a gombok felett */
+        margin-bottom: 10px;
+    }
+    
+    .button {
+        display: flex; /* Flexbox elrendezés a gombokhoz */
+        align-items: center; /* Középre igazítás a gombokon belül */
+        text-align: center; /* Szöveg középre igazítása */
+        border: none; /* Határ eltávolítása */
+        border-radius: 5px; /* Lekerekített sarkok */
+        cursor: pointer; /* Mutató a gombok fölött */
+    }
+
+    
+    .button img {
+        margin-right: 10px; /* Tér a kép és a szöveg között */
+    }
+
+    .city-name3{
+        font-size: 18px !important;
+        margin-left: 5px !important;
+    }
+
+    .city-name2{
+        margin-left: 20px;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .opening-hours{
+        font-size: 19px;
+    }
+
+    .opening-hours{
+        margin-bottom: 0px;
+        margin-top: 5px !important;
+    }
+
+}
+
+
+
+@media (max-width: 1353px){
+    .rectangle {
+        display: flex; /* Flexbox elrendezés a város és a gombok számára */
+        flex-direction: column; /* Vertikális elrendezés */
+        width: 100%; /* Teljes szélesség */
+        margin-bottom: 10px; /* Margó a téglalapok között */
+    }
+
+    .rectangle-header {
+        display: flex; /* Flexbox elrendezés a város név és a gombok számára */
+        align-items: center; /* Kép középre igazítása */
+        justify-content: space-between; /* Kép és város neve/gombok között egyenlő távolság */
+        margin: 0; /* Margó eltávolítása */
+    }
+
+    .city-info {
+        display: flex; /* Flexbox elrendezés a város neve és a gombok számára */
+        flex-direction: column; /* Vertikális elrendezés */
+        justify-content: center; /* Középre igazítás */
+        margin-left: 30px;
+    }
+
+    .rectangle-image {
+        width: 100px; /* Kép szélességének beállítása */
+        height: auto; /* Magasság automatikus legyen */
+        margin-left: 10px;
+    }
+
+    .city-name {
+        font-size: 22px; /* Város neve betűmérete */
+        text-align: left; /* Balra igazítás */
+        flex: 1; /* Terjedjen ki a szabad helyre */
+    }
+
+    .info-buttons {
+        display: flex; /* Flexbox elrendezés a gombokhoz */
+        flex-direction: column; /* Vertikális elrendezés */
+        gap: 10px; /* Kisebb távolság a gombok között */
+        margin-top: 10px;
+    }
+
+    .button {
+        display: flex; /* Flexbox elrendezés a gombokhoz */
+        align-items: center;
+        justify-content: left;
+        width: 150px; /* Gombok egyforma szélesség */
+        height: 50px;
+        background-color: #ff6f20; /* Gomb háttérszíne */
+        color: white; /* Gomb szövegszíne */
+        border-radius: 10px; /* Lekerekített sarkok */
+        font-size: 18px; /* Betűméret */
+        flex-shrink: 0;
+    }
+
+
+    .call-button {
+        background-color: limegreen; /* Hívjon gomb színe */
+    }
+
+    .route-button {
+        background-color: #4c90cd; /* Útvonal gomb színe */
+    }
+
+    .button-icon {
+        width: 40px; /* Ikon szélessége */
+        height: 40px; /* Ikon magassága */
+        margin-right: 5px; /* Távolság az ikon és a szöveg között */
+        margin-left: 5px;
+    }
+
+    .button-icon2 {
+        width: 30px; /* Ikon szélessége */
+        height: 30px; /* Ikon magassága */
+        margin-right: 10px; /* Távolság az ikon és a szöveg között */
+        margin-left: 10px;
+    }
+
+}
+
+@media (min-width: 1354px){
+    .info-buttons{
+        display: none;
+    }
+}
+
+/* Alapértelmezett beállítások */
+.navbar-collapse {
+    display: flex !important; /* Flex a nagyobb képernyők számára */
+}
+
+/* A navbar menü beállítása kisebb képernyőkre (például mobilok, kisebb tabletek) */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        display: none !important; /* A menü rejtve lesz */
+    }
+    .navbar-toggler {
+        display: block !important; /* A hamburger gomb megjelenik */
+    }
+}
+
+/* 992px és 1100px közötti képernyők */
+@media (min-width: 992px) and (max-width: 1100px) {
+    .navbar-collapse {
+        display: none !important; /* A menü nem jelenik meg lenyílva */
+    }
+}
+
+/* Nagyobb képernyők */
+@media (min-width: 1101px) {
+    .navbar-collapse {
+        display: flex !important; /* Flex menü */
+    }
+}
